@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="7.4.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="7.4.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="default_model" compatibility="7.4.000" expanded="true" height="82" name="Default Model" width="90" x="45" y="34">
+        <parameter key="method" value="median"/>
+        <parameter key="constant" value="0.0"/>
+        <parameter key="attribute_name" value=""/>
+      </operator>
+      <operator activated="true" class="k_nn" compatibility="7.4.000" expanded="true" height="82" name="k-NN" width="90" x="45" y="136">
+        <parameter key="k" value="1"/>
+        <parameter key="weighted_vote" value="false"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="GeneralizedIDivergence"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+      </operator>
+      <operator activated="true" class="k_nn" compatibility="7.4.000" expanded="true" height="82" name="k-NN (2)" width="90" x="45" y="238">
+        <parameter key="k" value="1"/>
+        <parameter key="weighted_vote" value="false"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="GeneralizedIDivergence"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+      </operator>
+      <operator activated="true" class="k_nn" compatibility="7.4.000" expanded="true" height="82" name="k-NN (3)" width="90" x="45" y="340">
+        <parameter key="k" value="1"/>
+        <parameter key="weighted_vote" value="false"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="GeneralizedIDivergence"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+      </operator>
+      <operator activated="true" class="k_nn" compatibility="7.4.000" expanded="true" height="82" name="k-NN (4)" width="90" x="45" y="442">
+        <parameter key="k" value="1"/>
+        <parameter key="weighted_vote" value="false"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
+        <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+        <parameter key="nominal_measure" value="NominalDistance"/>
+        <parameter key="numerical_measure" value="EuclideanDistance"/>
+        <parameter key="divergence" value="GeneralizedIDivergence"/>
+        <parameter key="kernel_type" value="radial"/>
+        <parameter key="kernel_gamma" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_degree" value="3.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+      </operator>
+      <operator activated="true" class="default_model" compatibility="7.4.000" expanded="true" height="82" name="Default Model (2)" width="90" x="45" y="544">
+        <parameter key="method" value="median"/>
+        <parameter key="constant" value="0.0"/>
+        <parameter key="attribute_name" value=""/>
+      </operator>
+      <operator activated="true" class="polynomial_regression" compatibility="7.4.000" expanded="true" height="82" name="Polynomial Regression" width="90" x="45" y="646">
+        <parameter key="max_iterations" value="5000"/>
+        <parameter key="replication_factor" value="1"/>
+        <parameter key="max_degree" value="5"/>
+        <parameter key="min_coefficient" value="-100.0"/>
+        <parameter key="max_coefficient" value="100.0"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="relevance_vector_machine" compatibility="7.4.000" expanded="true" height="82" name="Relevance Vector Machine" width="90" x="45" y="748">
+        <parameter key="rvm_type" value="Regression-RVM"/>
+        <parameter key="kernel_type" value="rbf"/>
+        <parameter key="kernel_lengthscale" value="3.0"/>
+        <parameter key="kernel_degree" value="2.0"/>
+        <parameter key="kernel_bias" value="1.0"/>
+        <parameter key="kernel_sigma1" value="1.0"/>
+        <parameter key="kernel_sigma2" value="0.0"/>
+        <parameter key="kernel_sigma3" value="2.0"/>
+        <parameter key="kernel_shift" value="1.0"/>
+        <parameter key="kernel_a" value="1.0"/>
+        <parameter key="kernel_b" value="0.0"/>
+        <parameter key="max_iteration" value="100"/>
+        <parameter key="min_delta_log_alpha" value="0.001"/>
+        <parameter key="alpha_max" value="1.0E12"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+      </operator>
+      <operator activated="true" class="group_models" compatibility="7.4.000" expanded="true" height="103" name="Group Models" width="90" x="45" y="850"/>
+      <operator activated="true" class="create_formula" compatibility="7.4.000" expanded="true" height="82" name="Create Formula" width="90" x="45" y="952"/>
+      <operator activated="true" class="apply_model" compatibility="7.4.000" expanded="true" height="82" name="Apply Model" width="90" x="45" y="1054">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="performance_classification" compatibility="7.4.000" expanded="true" height="82" name="Performance" width="90" x="45" y="1156">
+        <parameter key="main_criterion" value="first"/>
+        <parameter key="accuracy" value="true"/>
+        <parameter key="classification_error" value="false"/>
+        <parameter key="kappa" value="false"/>
+        <parameter key="weighted_mean_recall" value="false"/>
+        <parameter key="weighted_mean_precision" value="false"/>
+        <parameter key="spearman_rho" value="false"/>
+        <parameter key="kendall_tau" value="false"/>
+        <parameter key="absolute_error" value="false"/>
+        <parameter key="relative_error" value="false"/>
+        <parameter key="relative_error_lenient" value="false"/>
+        <parameter key="relative_error_strict" value="false"/>
+        <parameter key="normalized_absolute_error" value="false"/>
+        <parameter key="root_mean_squared_error" value="false"/>
+        <parameter key="root_relative_squared_error" value="false"/>
+        <parameter key="squared_error" value="false"/>
+        <parameter key="correlation" value="false"/>
+        <parameter key="squared_correlation" value="false"/>
+        <parameter key="cross-entropy" value="false"/>
+        <parameter key="margin" value="false"/>
+        <parameter key="soft_margin_loss" value="true"/>
+        <parameter key="logistic_loss" value="true"/>
+        <parameter key="skip_undefined_labels" value="true"/>
+        <parameter key="use_example_weights" value="true"/>
+        <list key="class_weights"/>
+      </operator>
+      <operator activated="true" class="performance_support_vector_count" compatibility="7.4.000" expanded="true" height="82" name="Performance (2)" width="90" x="45" y="1258">
+        <parameter key="optimization_direction" value="minimization"/>
+      </operator>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+    </process>
+  </operator>
+</process>
